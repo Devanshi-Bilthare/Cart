@@ -61,6 +61,7 @@ function updateCart(){
 
         </div>
         <h2 class="product_price">$${cartItems[item].price * cartItems[item].quantity}</h2>
+        <button class="remove_btn"> <i class="ri-close-line"></i> </button>
         `
         cartData.appendChild(cartItem);
     }
@@ -70,5 +71,19 @@ function updateCart(){
 
     totalItemsData.innerHTML = totalItems
     totalPriceData.innerHTML = `$${totalPrice}`
-    
+    var removeBtn = document.querySelectorAll('.remove_btn')
+    removeBtn.forEach((btn)=>{
+    btn.addEventListener("click",(e)=>{
+        var productName = e.target.closest('.product_data').querySelector('.product_name').textContent
+        delete cartItems[productName];
+        updateCart()
+    })
+})
 }
+
+
+var clearCart =document.querySelector(".clear_cart")
+clearCart.addEventListener("click",()=>{
+    cartItems = {}
+    updateCart()
+})

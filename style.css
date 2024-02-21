@@ -46,6 +46,7 @@ html,body{
     position: absolute;
     top: 0;
     left:1vw;
+    padding: 1vh;
 }
 .product{
     flex-shrink: 0;
@@ -117,6 +118,7 @@ button{
     align-items: center;
     padding: 3vh 0;
     border-bottom: 1px solid rgb(38, 38, 38);
+    position: relative;
 }
 
 .product_data>div{
@@ -136,4 +138,18 @@ button{
 span{
     padding: 1px 6px;
     border: 2px solid grey;
+}
+
+.remove_btn{
+    border: 2px solid Black;
+    color: #000;
+    position: absolute;
+    right: 0;
+    bottom:0 ;
+    padding: 1vh;
+}
+
+.clear_cart{
+    color: #000;
+    border-color: #000;
 }
