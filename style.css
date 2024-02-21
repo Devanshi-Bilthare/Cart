@@ -1,0 +1,139 @@
+@font-face {
+    font-family: Alight;
+    src: url('./archia-light-webfont.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.contain{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(29, 29, 29);
+    font-family: Alight;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw 0;
+}
+
+
+.product_contain{
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    flex-wrap: nowrap;
+   top: -50vh;
+   transition: 1s linear all;
+   z-index: 2;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    left:1vw;
+}
+.product{
+    flex-shrink: 0;
+    width: 12vw;
+    min-height: 30vh;
+    padding: 2vh;
+    background-color: rgb(107, 108, 108);
+}
+
+
+.img{
+    width: 100%;
+    height: 15vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product h2,.product h3{
+    font-size: 1.5vw;
+    margin-top: 1vh;
+}
+
+.show_btn{
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    z-index: 1;
+}
+
+button{
+    margin-top: 2vh;
+    padding: 1vh 3vh;
+    border: 2px solid whitesmoke;
+    background-color: transparent;
+    color: whitesmoke;
+    border-radius: 5px;
+    font-size: 1.2vw;
+    font-family: Alight;
+}
+
+
+.cart_contain{
+    width: 80vw;
+    min-height: 10vh;
+    background-color: whitesmoke;
+    padding: 5vw;
+}
+
+.cart_contain .top{
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    /* background-color: red; */
+    border-bottom: 1px solid rgb(38, 38, 38);
+}
+
+
+.top_left, .top_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.product_data{
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 0;
+    border-bottom: 1px solid rgb(38, 38, 38);
+}
+
+.product_data>div{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.product_img{
+    width: 10vw;
+    height: 15vh;
+    object-fit: cover;
+    object-position: center;
+}
+span{
+    padding: 1px 6px;
+    border: 2px solid grey;
+}
